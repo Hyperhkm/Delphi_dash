@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.1vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 5fr / 1.2fr 5fr;
+    grid-template-areas: 
+    'nav header'
+    'nav main';
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-area: nav;
+    background: #334155;
+    color: white;
+    gap: 3vh;
+    grid-template-rows: 0.3fr 1fr 0.5fr 1fr;
+}
+
+nav > *, nav > * > * {
+    display: grid;
+    align-items: center;
+    justify-items: flex-start;
+    margin-left: 1vw;
+}
+
+nav div div {
+    width: 100%;
+    display: inline-flex;
+    font-size: 2vh;
+}
+
+nav div div svg {
+    height: 4vh;
+    margin-right: 1vw;
+    fill: white;
+}
+
+nav div div:hover svg, nav div div:hover {
+    color: #0ea5e9;
+    fill: #0ea5e9;
+    cursor: pointer;
+}
+
+.dash {
+    display: inline-flex;
+    font-size: 3vh;
+    cursor: default;
+}
+
+.dash svg {
+    height: 5vh;
+    margin-right: 1vw;
+    fill: white;
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template-areas: 
+    'search profile'
+    'introduction main-buttons';
+}
+
+header * {
+    font-size: 1.7vh;
+}
+
+header > div {
+    display: inline-flex;
+    align-items: center;
+}
+
+.search, .introduction {
+    margin-left: 3vw;
+}
+
+.profile, .main-buttons {
+    margin-right: 4vw;
+}
+
+header div svg {
+    height: 3vh;
+    margin-right: 1vw;
+}
+
+.search {
+    grid-area: search;
+}
+
+.search input {
+    border-radius: 5rem;
+    border-color: transparent;
+    background: #cbd5e1;
+    height: 40%;
+    width: 100%;
+}
+
+.profile  {
+    grid-area: profile;
+    justify-content: flex-end;
+    padding-right: 3vw;
+    cursor: default;
+}
+
+.profile div {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 100%;
+    background-image: url(minhaFoto.jpg);
+    background-size: contain;
+}
+
+.profile div:hover {
+    cursor: pointer;
+}
+
+.profile > *, .introduction > * {
+    margin: 0 1vw;
+}
+
+.profile svg {
+    margin: 0 0;
+    cursor: pointer;
+}
+
+.introduction {
+    grid-area: introduction;
+}
+
+.introduction > :first-child {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 100%;
+    background-image: url(minhaFoto.jpg);
+    background-size: contain;
+}
+
+.main-buttons {
+    grid-area: main-buttons;
+    justify-content: space-evenly;
+}
+
+.main-buttons div {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background: #334155;
+    height: 4vh;
+    width: 5vw;
+    color: white;
+    border-radius: 5rem;
+    font-size: 1.5vh;
+}
+
+.main-buttons div:hover {
+    cursor: pointer;
+    background: #64748b;
+}
+
+main {
+    grid-area: main;
+    background: #cbd5e1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2vw;
+    padding-top: 3vh;
+    padding-bottom: 6vh;
+}
+
+.projects {
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+main h2 {
+    font-size: 2.3vh;
+    letter-spacing: 0.05vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
+}
+
+.projects > div {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+    grid-template-rows: repeat(3, minmax(10rem, 0.5fr));
+    gap: 1.5vw;
+}
+
+.projects > div > div {
+    background: linear-gradient(90deg, #eab308 2.5%, white 2.5%);
+    border-radius: 1rem;
+}
+
+.news > div > div {
+    background: white;
+    height: 25vh;
+    width: 95%;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.news > div > h2 {
+    text-align: center;
+}
+
+.news > div ul li { 
+    margin-bottom: 0.4rem;  
+ }
